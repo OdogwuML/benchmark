@@ -9,6 +9,9 @@ const geist = Geist({ subsets: ['latin'], variable: '--font-geist' });
 export const metadata: Metadata = {
   title: 'Benchmark',
   description: 'The new standard for financial trust',
+  icons: {
+    icon: '/favicon.svg',
+  },
 };
 
 export default function RootLayout({
