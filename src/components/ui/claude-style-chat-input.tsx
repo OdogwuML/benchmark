@@ -228,7 +228,7 @@ interface ClaudeChatInputProps {
     onSendMessage: (data: {
         message: string;
         files: AttachedFile[];
-        pastedContent: AttachedFile[];
+        pastedContent: { id: string; content: string; timestamp: Date; }[];
         model: string;
         isThinkingEnabled: boolean
     }) => void;
@@ -237,7 +237,7 @@ interface ClaudeChatInputProps {
 export const ClaudeChatInput: React.FC<ClaudeChatInputProps> = ({ onSendMessage }) => {
     const [message, setMessage] = useState("");
     const [files, setFiles] = useState<AttachedFile[]>([]);
-    const [pastedContent, setPastedContent] = useState<AttachedFile[]>([]);
+    const [pastedContent, setPastedContent] = useState<{ id: string; content: string; timestamp: Date; }[]>([]);
     const [isDragging, setIsDragging] = useState(false);
     const [selectedModel, setSelectedModel] = useState("sonnet-4.5");
     const [isThinkingEnabled, setIsThinkingEnabled] = useState(false);
