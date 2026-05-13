@@ -151,7 +151,7 @@ export default function SignUpPage() {
             <p className="text-[#3b494b] text-[14px] font-semibold tracking-[0.02em]">
               Already have an account?{" "}
               <Link 
-                href="/signup" 
+                href="/signin" 
                 className="text-[#151d1e] hover:text-[#635bff] transition-colors underline underline-offset-4 decoration-[#b9cacb]"
               >
                 Sign in
@@ -165,9 +165,11 @@ export default function SignUpPage() {
       <footer className="mt-auto border-t border-[#b9cacb]/40 bg-[#ffffff]">
         <div className="flex flex-col md:flex-row justify-between items-center px-[32px] py-[2.5rem] max-w-7xl mx-auto w-full gap-[1.5rem]">
           <div className="text-center md:text-left">
-            <span className="text-[20px] font-black tracking-tight text-[#151d1e]">
-              Benchmark
-            </span>
+            <Link href="/" className="inline-block hover:opacity-90 transition-opacity">
+              <span className="text-[20px] font-black tracking-tight text-[#151d1e]">
+                Benchmark
+              </span>
+            </Link>
             <p className="text-[12px] font-medium text-[#3b494b] mt-[4px]">
               © 2026 Benchmark. Built for performance.
             </p>
